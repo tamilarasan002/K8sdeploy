@@ -25,3 +25,7 @@ jobs:
           cd KubernetesDeployment-Dev/src/frontend
           docker build -t k8scontainerpratice.azurecr.io/frontend .
           docker push k8scontainerpratice.azurecr.io/frontend
+
+          cd KubernetesDeployment-Dev/src/adservice
+          docker build -t k8scontainerpratice.azurecr.io/adservice .
+          docker push k8scontainerpratice.azurecr.io/frontend
