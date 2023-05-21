@@ -22,5 +22,6 @@ jobs:
 
     - name: Build and push Docker images
       run: |
-          docker build -t k8scontainerpratice.azurecr.io/paymentservice-prod:latest ./KubernertesDeployment-Dev/src/frontend
-          docker push $ACR_NAME.k8scontainerpratice.azurecr.io/paymentservice-prod:latest"
+          cd ~/KubernertesDeployment-Dev/src/frontend
+          docker build -t k8scontainerpratice.azurecr.io/frontend-prod:latest .
+          docker push k8scontainerpratice.azurecr.io/frontend-prod:latest
