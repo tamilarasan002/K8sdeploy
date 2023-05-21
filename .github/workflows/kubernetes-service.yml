@@ -22,6 +22,6 @@ jobs:
 
     - name: Build and push Docker images
       run: |
-          cd ~/KubernertesDeployment-Dev/src/frontend
+          cd ~/KubernetesDeployment-Dev/src/frontend
           docker build -t k8scontainerpratice.azurecr.io/frontend-prod:latest .
           docker push k8scontainerpratice.azurecr.io/frontend-prod:latest
