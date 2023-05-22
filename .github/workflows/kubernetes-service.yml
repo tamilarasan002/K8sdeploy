@@ -26,13 +26,6 @@ jobs:
           docker build -t k8scontainerpratice.azurecr.io/frontend:latest .
           docker push k8scontainerpratice.azurecr.io/frontend:latest
           
-    - name: Build and push Docker images
-      run: |
-          cd KubernetesDeployment-Dev/src/adservice
-          docker build -t k8scontainerpratice.azurecr.io/adservice:latest .
-          docker push k8scontainerpratice.azurecr.io/adservice:latest
-          
-          
     - name: Deploy to AKS
       uses: azure/k8s-set-context@v1
       with:
