@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: k8scontainerpratice.azurecr.io/frontend:latest
+          image: "k8scontainerpratice.azurecr.io/frontend:latest"
           ports:
             - containerPort: 8080
 
