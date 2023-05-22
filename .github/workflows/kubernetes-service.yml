@@ -25,3 +25,15 @@ jobs:
           cd KubernetesDeployment-Dev/src/frontend
           docker build -t k8scontainerpratice.azurecr.io/frontend:latest .
           docker push k8scontainerpratice.azurecr.io/frontend:latest
+          
+          
+    - name: Deploy to AKS
+      uses: azure/k8s-set-context@v1
+      with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.KUBECONFIG }}
+
+    - name: Apply Kubernetes manifests
+      run: |
+        cd KubernetesDeplotment-Dev/src/Manifest 
+        kubectl apply -f frontend.yaml
