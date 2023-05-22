@@ -26,13 +26,4 @@ jobs:
           docker push k8scontainerpratice.azurecr.io/adservice:latest
           
           
-    - name: Deploy to AKS
-      uses: azure/k8s-set-context@v1
-      with:
-        method: kubeconfig
-        kubeconfig: ${{ secrets.KUBECONFIG }}
-
-    - name: Apply Kubernetes manifests
-      run: |
-        cd KubernetesDeployment-Dev/kubernetes/Manifest/
-        kubectl apply -f adservice.yaml
+  
