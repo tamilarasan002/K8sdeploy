@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  namespace: nonprod
 spec:
   replicas: 1
   selector:
@@ -10,7 +11,6 @@ spec:
   template:
     metadata:
       labels:
-        namespace: nonprod
         app: frontend
     spec:
       containers:
