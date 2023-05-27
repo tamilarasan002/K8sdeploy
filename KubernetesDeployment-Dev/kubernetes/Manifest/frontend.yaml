@@ -10,6 +10,7 @@ spec:
   template:
     metadata:
       labels:
+        namespace: nonprod
         app: frontend
     spec:
       containers:
