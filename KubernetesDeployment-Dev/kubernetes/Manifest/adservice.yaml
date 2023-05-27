@@ -43,7 +43,7 @@ metadata:
 spec:
   containers:
     - name: server
-      image: "k8scontainerpratice.azurecr.io/adservice:latest"
+      image: "k8scontainerregistry1.azurecr.io/adservice:latest"
       ports:
         - containerPort: 9555
 
