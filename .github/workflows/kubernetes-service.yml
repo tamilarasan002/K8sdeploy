@@ -1,5 +1,5 @@
 
-name: Build to AKS
+name: Build to AKS - Frontend
 
 on:
   push:
