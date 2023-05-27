@@ -1,4 +1,4 @@
-name: Build to AKS
+name: Build to AKS - Adservice
 
 on:
   push:
