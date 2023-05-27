@@ -13,7 +13,7 @@ spec:
         app: adservice
     spec:
       containers:
-        - name: server
+        - name: adservice
           image: "k8scontainerregistry1.azurecr.io/adservice:latest"
           ports:
             - containerPort: 9555
@@ -43,7 +43,7 @@ metadata:
     app: adservice
 spec:
   containers:
-    - name: server
+    - name: adservice
       image: "k8scontainerregistry1.azurecr.io/adservice:latest"
       ports:
         - containerPort: 9555
