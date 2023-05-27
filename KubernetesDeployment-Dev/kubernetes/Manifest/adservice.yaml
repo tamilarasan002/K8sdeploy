@@ -34,4 +34,19 @@ spec:
       port: 9555
       targetPort: 9555
       
+---      
+apiVersion: v1
+kind: Pod
+metadata:
+  name: adservice-pod
+  namespace: nonprod
+  labels:
+    app: adservice
+spec:
+  containers:
+    - name: adservice
+      image: "k8scontainerregistry1.azurecr.io/adservice:latest"
+      ports:
+        - containerPort: 9555
+      
 
