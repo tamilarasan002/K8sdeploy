@@ -38,6 +38,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: adservice-pod
+  namespace: nonprod
   labels:
     app: adservice
 spec:
