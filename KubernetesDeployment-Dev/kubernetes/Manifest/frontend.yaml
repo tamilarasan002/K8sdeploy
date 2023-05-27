@@ -40,7 +40,7 @@ metadata:
   name: frontend
   namespace: nonprod
 spec:
-  type: Loadbalancer
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
