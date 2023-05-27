@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: 10.244.0.0/16
+    - host: ecart.com
       http:
         paths:
           - path: /adservice
