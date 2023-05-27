@@ -13,7 +13,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: server
+        - name: frontend
           image: "k8scontainerregistry1.azurecr.io/frontend:latest"
           ports:
             - containerPort: 8080
@@ -42,7 +42,7 @@ metadata:
     app: frontend
 spec:
   containers:
-    - name: server
+    - name: frontend
       image: "k8scontainerregistry1.azurecr.io/frontend:latest"
       ports:
         - containerPort: 8080
