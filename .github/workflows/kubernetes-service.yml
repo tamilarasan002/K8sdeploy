@@ -16,15 +16,15 @@ jobs:
     - name: Login to ACR
       uses: azure/docker-login@v1
       with:
-        login-server: k8scontainerpratice.azurecr.io
+        login-server: k8scontainerregistry1.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
 
     - name: Build and push Docker images
       run: |
           cd KubernetesDeployment-Dev/src/frontend
-          docker build -t k8scontainerpratice.azurecr.io/frontend:latest .
-          docker push k8scontainerpratice.azurecr.io/frontend:latest
+          docker build -t k8scontainerregistry1.azurecr.io/frontend:latest .
+          docker push k8scontainerregistry1.azurecr.io/frontend:latest
           
     - name: Deploy to AKS
       uses: azure/k8s-set-context@v1
