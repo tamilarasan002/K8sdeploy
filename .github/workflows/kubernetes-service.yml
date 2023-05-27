@@ -37,7 +37,4 @@ jobs:
         cd KubernetesDeployment-Dev/kubernetes/Manifest/
         kubectl apply -f frontend.yaml
         
-    - name: Apply Kubernetes ingress
-      run: |
-        cd KubernetesDeployment-Dev/kubernetes/Ingress/
-        kubectl apply -f ingress.yaml
+
